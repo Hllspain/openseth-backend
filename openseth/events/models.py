@@ -16,8 +16,8 @@ class Field(models.Model):
     event_template = models.ForeignKey(
         EventTemplate,
         on_delete=models.CASCADE,
-        blank=False,
-        null=False
+        blank=True,
+        null=True
     )
 
     class Meta:
