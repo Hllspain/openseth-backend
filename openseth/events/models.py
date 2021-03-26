@@ -13,6 +13,8 @@ class EventTemplate(models.Model):
 class Field(models.Model):
     title = models.CharField(max_length=128)
     representation = models.CharField(max_length=128)
+    min = models.IntegerField(blank=True, null=True)
+    max = models.IntegerField(blank=True, null=True)
     event_template = models.ForeignKey(
         EventTemplate,
         on_delete=models.CASCADE,
